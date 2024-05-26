@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Kontakt";
+}
+
+<section>
+    <div class="contact">
+        <h2>Kontakt</h2>
+        <form action="/Home/SubmitContactForm" method="post" class="contact-form">
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Wyślij</button>
+        </form>
+        @if (ViewBag.Message != null)
+        {
+            <p>@ViewBag.Message</p>
+        }
+    </div>
+</section>

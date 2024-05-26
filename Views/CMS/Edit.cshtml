@@ -1,0 +1,11 @@
+﻿@model TravelBlog.Models.GalleryItem
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label asp-for="Title"></label>
+        <input asp-for="Title" />
+        <span asp-validation-for="Title"></span>
+    </div>
+    <button type="submit">Zapisz zmiany</button>
+</form>

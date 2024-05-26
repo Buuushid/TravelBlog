@@ -1,0 +1,10 @@
+﻿@model TravelBlog.Models.GalleryItem
+
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="Title"></label>
+        <input asp-for="Title" />
+        <span asp-validation-for="Title"></span>
+    </div>
+    <button type="submit">Dodaj</button>
+</form>

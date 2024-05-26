@@ -1,0 +1,11 @@
+﻿@model TravelBlog.Models.GalleryItem
+
+<h2>Detale elementu galerii</h2>
+
+<div>
+    <h4>Id: @Model.Id</h4>
+    <h4>Tytuł: @Model.Title</h4>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id">Edytuj</a> |
+<a asp-action="Index">Wróć do listy</a>
