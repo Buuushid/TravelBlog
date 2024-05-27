@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TravelBlog.Data;
+using TravelBlogDB1.Data;
 
 #nullable disable
 
-namespace TravelBlog.Data.Migrations
+namespace TravelBlogDB1.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -224,7 +224,7 @@ namespace TravelBlog.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("TravelBlog.Models.Email", b =>
+            modelBuilder.Entity("TravelBlogDB1.Models.Email", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -234,8 +234,7 @@ namespace TravelBlog.Data.Migrations
 
                     b.Property<string>("EmailAddress")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Message")
                         .IsRequired()
@@ -252,7 +251,7 @@ namespace TravelBlog.Data.Migrations
                     b.ToTable("Emails");
                 });
 
-            modelBuilder.Entity("TravelBlog.Models.GalleryItem", b =>
+            modelBuilder.Entity("TravelBlogDB1.Models.GalleryItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

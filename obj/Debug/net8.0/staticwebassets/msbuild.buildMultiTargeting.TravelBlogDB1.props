@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TravelBlogDB1.props" />
+</Project>

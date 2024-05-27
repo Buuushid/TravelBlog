@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using TravelBlog.Models;
+using TravelBlogDB1.Models;
 
-namespace TravelBlog.Data
+namespace TravelBlogDB1.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
@@ -10,10 +10,7 @@ namespace TravelBlog.Data
             : base(options)
         {
         }
-
         public DbSet<Email> Emails { get; set; }
         public DbSet<GalleryItem> GalleryItems { get; set; }
-
     }
-
 }

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace TravelBlog.Models
+namespace TravelBlogDB1.Models
 {
     public class Email
     {
@@ -12,8 +12,7 @@ namespace TravelBlog.Models
 
         [Required]
         [EmailAddress]
-        [StringLength(100)]
-        public string EmailAddress { get; set; }
+        public string EmailAddress { get; set; } 
 
         [Required]
         [StringLength(500)]

@@ -1,24 +1,29 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using TravelBlog.Models;
-using TravelBlog.Data;
-using TravelBlog.Repositories;
+using TravelBlogDB1.Data;
+using TravelBlogDB1.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+
+// Configure ApplicationDbContext for Identity
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
+
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddScoped<IGalleryRepository, GalleryRepository>();
+// Register IGalleryItemRepository
+builder.Services.AddScoped<IGalleryItemRepository, GalleryItemRepository>();
 
 var app = builder.Build();
 
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();

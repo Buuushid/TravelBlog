@@ -1,30 +1,5 @@
-﻿@model IEnumerable<TravelBlog.Models.GalleryItem>
-
-<h2>Lista elementów galerii</h2>
-
-<p>
-    <a asp-action="Create">Dodaj nowy element</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Tytuł</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.Id</td>
-                <td>@item.Title</td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@item.Id">Szczegóły</a> |
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edytuj</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Usuń</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}

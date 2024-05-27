@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 
-namespace TravelBlog.Data.Migrations
+namespace TravelBlogDB1.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

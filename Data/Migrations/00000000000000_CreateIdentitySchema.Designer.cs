@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
-using TravelBlog.Data;
+using TravelBlogDB1.Data;
 
-namespace TravelBlog.Data.Migrations
+namespace TravelBlogDB1.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("00000000000000_CreateIdentitySchema")]

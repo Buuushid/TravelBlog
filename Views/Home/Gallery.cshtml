@@ -1,17 +1,14 @@
-﻿@{
-    ViewBag.Title = "Galeria";
-}
-
-<section>
+﻿<section id="gallery" class="gallery-container">
     <div class="gallery">
-        <h2>Galeria</h2>
-        <div class="gallery-grid">
-            @foreach (var item in Model)
-            {
-                <div class="gallery-item">
-                    <img src="~/img/gallery-@item.Id.jpg" alt="gallery image" />
+        @foreach (var item in Model)
+        {
+            <div class="gallery-box">
+                <img src="@item.ImageUrl" alt="@item.Description" class="gallery-main-photo">
+                <p class="main-gallery-photo-description">@item.Description</p>
+                <div class="gallery-cover">
+                    <img src="./img/galleryIcons.png" alt="gallery icon">
                 </div>
-            }
-        </div>
+            </div>
+        }
     </div>
 </section>

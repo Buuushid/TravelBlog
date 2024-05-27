@@ -1,4 +1,4 @@
-namespace TravelBlog.Models
+namespace TravelBlogDB1.Models
 {
     public class ErrorViewModel
     {
